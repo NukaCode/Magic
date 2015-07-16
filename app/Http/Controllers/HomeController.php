@@ -15,7 +15,7 @@ class HomeController extends Controller
         if ($cache->has($search)) {
             $cards = $cache->get($search);
         } else {
-            $index        = $client->initIndex(config('algolia.index'));
+            $index = $client->initIndex(config('algolia.index'));
             $cards = $index->search($search)['hits'];
 
             $cache->forever($search, $cards);
