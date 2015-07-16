@@ -1,11 +1,14 @@
 @extends('layouts.default')
 
 @section('content')
-    <div id="results">
-        <article v-repeat="card: cards">
-            <h2>@{{ card.name }} @{{ card.type }}</h2>
-            <p>@{{ card.text }}</p>
-        </article>
+    <div class="ui segments">
+        <div class="ui horizontal segments" v-repeat="card: cards">
+            <div class="ui segment" style="width: 80%;">@{{ card.name }}</div>
+            <div class="ui segment" style="width: 10%;">
+                <div  v-if="card.power != null">@{{ card.power }}/@{{ card.toughness }}</div>
+            </div>
+            <div class="ui segment" style="width: 10%;">@{{ card.manaCost }}</div>
+        </div>
     </div>
 @endsection
 @section('js')
