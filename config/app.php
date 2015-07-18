@@ -145,6 +145,14 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         /*
+         * NukaCode Core Service Providers...
+         */
+        NukaCode\Core\CoreServiceProvider::class,
+        NukaCode\Core\View\ViewServiceProvider::class,
+        NukaCode\Core\Ajax\AjaxServiceProvider::class,
+        NukaCode\Menu\MenuServiceProvider::class,
+
+        /*
          * External Providers
          */
         AlgoliaSearch\Laravel\AlgoliaServiceProvider::class,

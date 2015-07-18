@@ -9,7 +9,8 @@
         "laravel/framework": "5.1.*",
         "algolia/algoliasearch-laravel": "^1.0",
         "laracasts/utilities": "^2.0",
-        "nukacode/core": "^2.1"
+        "nukacode/core": "^2.1",
+        "nukacode/menu": "dev-1.0.0-alpha"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -20,6 +21,12 @@
     "autoload": {
         "classmap": [
             "database"
+        ],
+        "files": [
+            "bootstrap/helpers/base.php",
+            "bootstrap/helpers/math.php",
+            "bootstrap/helpers/route.php",
+            "bootstrap/helpers/time.php"
         ],
         "psr-4": {
             "App\\": "app/"

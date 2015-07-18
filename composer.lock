@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b50217127b75c772a36ac208dd74eb63",
+    "hash": "2dae2e9fee474718077f39ae90a50f4a",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -1477,6 +1477,46 @@
             ],
             "description": "A core set of features for laravel sites.",
             "time": "2015-06-19 13:50:53"
+        },
+        {
+            "name": "nukacode/menu",
+            "version": "dev-1.0.0-alpha",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NukaCode/menu.git",
+                "reference": "00d60e465ea06228d201329757d3b525345bbd6a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NukaCode/menu/zipball/00d60e465ea06228d201329757d3b525345bbd6a",
+                "reference": "00d60e465ea06228d201329757d3b525345bbd6a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": ">=4.0"
+            },
+            "require-dev": {
+                "henrikbjorn/phpspec-code-coverage": "~0.2",
+                "phpspec/phpspec": "~2.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NukaCode\\Menu\\": "src/NukaCode/Menu"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Riddles",
+                    "email": "riddles@dev-toolbox.com"
+                }
+            ],
+            "description": "A simple menu system.",
+            "time": "2015-07-02 01:56:10"
         },
         {
             "name": "psr/log",
@@ -3675,7 +3715,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "nukacode/menu": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

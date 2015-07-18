@@ -38,8 +38,8 @@ return [
     'connections' => [
 
         'main' => [
-            'id' => 'RAS59T0I15',
-            'key' => 'bfb86655b3266e49f0500dd148bb3f0f',
+            'id' => env('ALGOLIA_ID'),
+            'key' => env('ALGOLIA_KEY'),
         ],
 
         'alternative' => [
