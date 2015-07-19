@@ -1,0 +1,88 @@
+@pageBackground   : #343838;
+@grey             : #343838;
+@primaryColor     : #5097b5;
+@linkColor        : #76c6e8;
+
+@gray-darker      : lighten(@grey, 13.5%);
+@gray-dark        : lighten(@grey, 20%);
+@gray-light       : lighten(@grey, 60%);
+@gray-lighter     : lighten(@grey, 93.5%);
+
+/*---  Colors  ---*/
+@red              : #631313;
+@orange           : #8c4011;
+@yellow           : #a17905;
+@olive            : #7b8b10;
+@green            : #126425;
+@teal             : #007e79;
+@blue             : #155382;
+@violet           : #3b1f77;
+@purple           : #692181;
+@pink             : #922562;
+@brown            : #694228;
+@black            : #1b1c1d;
+
+/*---  Light Colors  ---*/
+@lightRed         : #ff695e;
+@lightOrange      : #ff851b;
+@lightYellow      : #ffe21f;
+@lightOlive       : #d9e778;
+@lightGreen       : #2ecc40;
+@lightTeal        : #6dffff;
+@lightBlue        : #54c8ff;
+@lightViolet      : #a291fb;
+@lightPurple      : #dc73ff;
+@lightPink        : #ff8edf;
+@lightBrown       : #d67c1c;
+@lightGrey        : #dcddde;
+@lightBlack       : #545454;
+
+/*---   Neutrals  ---*/
+@fullBlack        : #000000;
+@offWhite         : #f9fafb;
+@darkWhite        : #f3f4f5;
+@midWhite         : #dcddde;
+@white            : #ffffff;
+
+/*--- Colored Backgrounds ---*/
+@redBackground    : @red;
+@orangeBackground : #ffedde;
+@yellowBackground : #fff8db;
+@oliveBackground  : #fbfdef;
+@greenBackground  : #e5f9e7;
+@tealBackground   : #e1f7f7;
+@blueBackground   : #dff0ff;
+@violetBackground : #eae7ff;
+@purpleBackground : #f6e7ff;
+@pinkBackground   : #ffe3fb;
+@brownBackground  : #f1e2d3;
+
+/*--- Colored Headers ---*/
+@redHeaderColor    : darken(@redTextColor, 5);
+@oliveHeaderColor  : darken(@oliveTextColor, 5);
+@greenHeaderColor  : darken(@greenTextColor, 5);
+@yellowHeaderColor : darken(@yellowTextColor, 5);
+@blueHeaderColor   : darken(@blueTextColor, 5);
+@tealHeaderColor   : darken(@tealTextColor, 5);
+@pinkHeaderColor   : darken(@pinkTextColor, 5);
+@violetHeaderColor : darken(@violetTextColor, 5);
+@purpleHeaderColor : darken(@purpleTextColor, 5);
+@orangeHeaderColor : darken(@orangeTextColor, 5);
+@brownHeaderColor  : darken(@brownTextColor, 5);
+
+/*--- Colored Text ---*/
+@redTextColor    : @red;
+@orangeTextColor : @orange;
+@yellowTextColor : #b58105;
+// Yellow text is difficult to read
+@oliveTextColor  : #8abc1e;
+// Olive is difficult to read
+@greenTextColor  : #1ebc30;
+// Green is difficult to read
+@tealTextColor   : #10a3a3;
+// Teal text is difficult to read
+@blueTextColor   : @blue;
+@violetTextColor : @violet;
+@purpleTextColor : @purple;
+@pinkTextColor   : @pink;
+@brownTextColor  : @brown;

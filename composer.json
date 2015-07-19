@@ -10,7 +10,8 @@
         "algolia/algoliasearch-laravel": "^1.0",
         "laracasts/utilities": "^2.0",
         "nukacode/core": "^2.1",
-        "nukacode/menu": "dev-1.0.0-alpha"
+        "nukacode/menu": "dev-1.0.0-alpha",
+        "nukacode/html": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

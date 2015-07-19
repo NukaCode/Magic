@@ -151,6 +151,7 @@ return [
         NukaCode\Core\View\ViewServiceProvider::class,
         NukaCode\Core\Ajax\AjaxServiceProvider::class,
         NukaCode\Menu\MenuServiceProvider::class,
+        NukaCode\Html\HtmlServiceProvider::class,
 
         /*
          * External Providers
@@ -205,6 +206,13 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+
+        // Extras
+        'HTML'           => Collective\Html\HtmlFacade::class,
+        'Form'           => Collective\Html\FormFacade::class,
+        'Str'            => Illuminate\Support\Str::class,
+        'BaseController' => App\Http\Controllers\Controller::class,
+        'BaseModel'      => App\Models\BaseModel::class,
 
     ],
 

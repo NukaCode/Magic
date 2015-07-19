@@ -1,0 +1,11 @@
+{
+  "name": "MTG Deck Planner",
+  "dependencies": {
+    "font-awesome": "~4.3.0",
+    "vue": "~0.12.7",
+    "vue-resource": "~0.1.10",
+    "semantic-ui": "~2.0.4",
+    "messenger": "~1.4.2",
+    "algoliasearch": "~3.7.3"
+  }
+}

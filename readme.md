@@ -5,3 +5,12 @@
 [![Magic: The Gathering](http://duelgrounds.com/img/magic_banner-1000x2821.jpg)](http://magic.wizards.com)
 
 Please look to the [no goblins allowed forums](http://forum.nogoblinsallowed.com/viewtopic.php?f=38&t=9603) to post on this and get more details.  This readme will be updated as development continues.
+
+# Installation
+
+```
+    cd <Project Folder>
+    git clone https://github.com/NukaCode/Magic.git ./
+    npm install
+    bower install
+```

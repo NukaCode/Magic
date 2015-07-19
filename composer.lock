@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2dae2e9fee474718077f39ae90a50f4a",
+    "hash": "32ea19f4d91d8d5b81da7ccd69dabfae",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -1133,6 +1133,56 @@
             "time": "2015-07-12 02:27:36"
         },
         {
+            "name": "laravelcollective/html",
+            "version": "v5.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelCollective/html.git",
+                "reference": "c93974c835aebd1fc49d4aa897b30dd507b08a62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/c93974c835aebd1fc49d4aa897b30dd507b08a62",
+                "reference": "c93974c835aebd1fc49d4aa897b30dd507b08a62",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "5.1.*",
+                "illuminate/routing": "5.1.*",
+                "illuminate/session": "5.1.*",
+                "illuminate/support": "5.1.*",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Collective\\Html\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                },
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                }
+            ],
+            "time": "2015-07-11 09:34:06"
+        },
+        {
             "name": "league/flysystem",
             "version": "1.0.9",
             "source": {
@@ -1477,6 +1527,48 @@
             ],
             "description": "A core set of features for laravel sites.",
             "time": "2015-06-19 13:50:53"
+        },
+        {
+            "name": "nukacode/html",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NukaCode/html.git",
+                "reference": "404805f3dbb319823bb87afcf43a64bbc42780eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NukaCode/html/zipball/404805f3dbb319823bb87afcf43a64bbc42780eb",
+                "reference": "404805f3dbb319823bb87afcf43a64bbc42780eb",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "~5.0",
+                "laravelcollective/html": "~5.0",
+                "nukacode/core": "~2.0"
+            },
+            "require-dev": {
+                "henrikbjorn/phpspec-code-coverage": "~0.2",
+                "phpspec/phpspec": "~2.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NukaCode\\Html\\": "src/NukaCode/Html"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stygian",
+                    "email": "stygian.warlock.v2@gmail.com"
+                }
+            ],
+            "description": "Helpers for NukaCode HTML.",
+            "time": "2015-05-02 06:22:38"
         },
         {
             "name": "nukacode/menu",
