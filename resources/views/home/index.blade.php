@@ -10,13 +10,19 @@
                 <img class="ui fluid image" id="cardImage" src="/images/Magic_Card_Back.png" />
             </div>
         </div>
-        <div class="four wide olive column">Deck</div>
+        <div class="four wide olive column">
+            <div id="mainDeck">
+                <div v-repeat="card: mainDeck">
+                    <div>@{{ card.name }}</div>
+                </div>
+            </div>
+        </div>
         <div class="ten wide grey column">
             <div class="ui siz column grid">
                 <div class="six column row">
                     <div class="red column">
                         <div class="ui horizontal list" v-repeat="card: cards | filterBy 'Red' in 'colors' | filterBy search | orderBy orderKey" v-if="card.colors.length == 1">
-                            <div class="item" v-if="card.colors.length == 1" v-on="mouseover: getImage(card.number)">@{{ card.name }}</div>
+                            <div class="item" v-if="card.colors.length == 1" v-on="click: addCard(card)">@{{ card.name }}</div>
                             <div class="item" v-if="card.power != null" v-if="card.colors.length == 1">@{{ card.power }}/@{{ card.toughness }}</div>
                             <div class="item right floated" v-if="card.colors.length == 1">@{{{ card.manaCost }}}</div>
                         </div>
@@ -88,6 +94,7 @@
 
             data: {
                 cards: window.cards,
+                mainDeck: [],
                 colors: [],
                 search: '',
                 orderKey: 'cmc'
@@ -104,6 +111,10 @@
                     this.$http.get(url, function (data, status, request) {
                         $('#cardImage').attr('src', 'data:image/png;base64,'+ data);
                     });
+                },
+                addCard: function (card) {
+                    this.mainDeck.$add(card.id, card);
+                    console.log(this.mainDeck);
                 }
             }
 

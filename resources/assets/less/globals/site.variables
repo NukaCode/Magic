@@ -1,3 +1,8 @@
+// Fonts
+@googleFontSizes   : '300';
+@emSize   : 12px;
+@fontSize : 10px;
+
 @pageBackground   : #343838;
 @grey             : #343838;
 @primaryColor     : #5097b5;
