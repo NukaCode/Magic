@@ -11,4 +11,4 @@
 |
 */
 
-Route::get('/{search?}', 'HomeController@index');
+Route::get('/', 'HomeController@index');

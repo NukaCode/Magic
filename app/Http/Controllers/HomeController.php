@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use AlgoliaSearch\Client;
+use App\Models\Card;
+use App\Models\Series;
 use Illuminate\Cache\Repository;
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {

@@ -2,48 +2,51 @@
 
 @section('content')
     <div class="ui internally celled grid">
+        <div class="sixteen wide column">
+            <input type="text" class="search" v-model="search" />
+        </div>
         <div class="two wide black column">Info Panel</div>
         <div class="four wide olive column">Deck</div>
         <div class="ten wide grey column">
             <div class="ui siz column grid">
                 <div class="six column row">
                     <div class="red column">
-                        <div class="ui horizontal list" v-repeat="card: cards | filterBy 'Red' in colors">
-                            <div class="item">@{{ card.name }}</div>
-                            <div class="item" v-if="card.power != null">@{{ card.power }}/@{{ card.toughness }}</div>
-                            <div class="item right floated">@{{{ card.manaCost }}}</div>
+                        <div class="ui horizontal list" v-repeat="card: cards | filterBy 'Red' in 'colors' | filterBy search | orderBy orderKey" v-if="card.colors.length == 1">
+                            <div class="item" v-if="card.colors.length == 1">@{{ card.name }}</div>
+                            <div class="item" v-if="card.power != null" v-if="card.colors.length == 1">@{{ card.power }}/@{{ card.toughness }}</div>
+                            <div class="item right floated" v-if="card.colors.length == 1">@{{{ card.manaCost }}}</div>
                         </div>
                     </div>
                     <div class="green column">
-                        <div class="ui horizontal list" v-repeat="card: cards | filterBy 'Red' in colors">
+                        <div class="ui horizontal list" v-repeat="card: cards | filterBy 'Green' in 'colors'">
                             <div class="item">@{{ card.name }}</div>
                             <div class="item" v-if="card.power != null">@{{ card.power }}/@{{ card.toughness }}</div>
                             <div class="item right floated">@{{{ card.manaCost }}}</div>
                         </div>
                     </div>
                     <div class="yellow column">
-                        <div class="ui horizontal list" v-repeat="card: cards | filterBy 'White' in colors">
+                        <div class="ui horizontal list" v-repeat="card: cards | filterBy 'White' in 'colors'">
                             <div class="item">@{{ card.name }}</div>
                             <div class="item" v-if="card.power != null">@{{ card.power }}/@{{ card.toughness }}</div>
                             <div class="item right floated">@{{{ card.manaCost }}}</div>
                         </div>
                     </div>
                     <div class="blue column">
-                        <div class="ui horizontal list" v-repeat="card: cards | filterBy 'Blue' in colors">
+                        <div class="ui horizontal list" v-repeat="card: cards | filterBy 'Blue' in 'colors'">
                             <div class="item">@{{ card.name }}</div>
                             <div class="item" v-if="card.power != null">@{{ card.power }}/@{{ card.toughness }}</div>
                             <div class="item right floated">@{{{ card.manaCost }}}</div>
                         </div>
                     </div>
                     <div class="black column">
-                        <div class="ui horizontal list" v-repeat="card: cards | filterBy 'black' in colors">
+                        <div class="ui horizontal list" v-repeat="card: cards | filterBy 'Black' in 'colors'">
                             <div class="item">@{{ card.name }}</div>
                             <div class="item" v-if="card.power != null">@{{ card.power }}/@{{ card.toughness }}</div>
                             <div class="item right floated">@{{{ card.manaCost }}}</div>
                         </div>
                     </div>
                     <div class="grey column">
-                        <div class="ui horizontal list" v-repeat="card: cards| colorless">
+                        <div class="ui horizontal list" v-repeat="card: cards | colorless">
                             <div class="item">@{{ card.name }}</div>
                             <div class="item" v-if="card.power != null">@{{ card.power }}/@{{ card.toughness }}</div>
                             <div class="item right floated">@{{{ card.manaCost }}}</div>
@@ -64,8 +67,16 @@
 @endsection
 @section('js')
     <script>
-        Vue.filter('colorless', function (value) {
-            console.log(value);
+        // OrderBy Options:  cmc, type, colors
+        Vue.filter('colorless', function (cards) {
+            var colorlessCards = [];
+            $.each(cards, function (key, card) {
+                if (typeof card.colors === 'undefined' || card.colors.length > 1) {
+                    colorlessCards.push(card);
+                }
+            });
+
+            return colorlessCards;
         });
 
         new Vue({
@@ -73,16 +84,15 @@
 
             data: {
                 cards: window.cards,
-                colors: []
+                colors: [],
+                search: '',
+                orderKey: 'cmc'
             },
 
             methods: {
                 toggleColor: function (color) {
-//                    console.log(object);
                     this.colors.$add(color, color);
-
-                    console.log(this.colors);
-//                    $(object).removeClass('disabled');
+                    $(object).removeClass('disabled');
                 }
             }
 
