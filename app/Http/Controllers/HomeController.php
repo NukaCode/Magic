@@ -4,24 +4,15 @@ namespace App\Http\Controllers;
 
 use AlgoliaSearch\Client;
 use App\Models\Card;
-use App\Models\Series;
 use Illuminate\Cache\Repository;
 use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
 
-    public function index(Filesystem $filesystem)
+    public function index(Filesystem $filesystem, Card $card)
     {
-        $cards = json_decode($filesystem->get(base_path('resources/assets/json/origins.json')));
-        //ppd($cards);
-
-        foreach ($cards as $index => $card) {
-            if (isset($card->manaCost)) {
-                $cards[$index]->manaCost = preg_replace('/{(.)}/', '<img src="/images/blank.png" id="$1" />', $card->manaCost);
-            }
-        }
+        $cards = $card->all();
 
         $this->setJavascriptData(compact('cards'));
     }
