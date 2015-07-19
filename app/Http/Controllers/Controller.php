@@ -11,6 +11,11 @@ abstract class Controller extends BaseController
 {
     use DispatchesJobs, ValidatesRequests;
 
+    protected $layoutOptions = [
+        'default' => 'layouts.default',
+        'ajax'    => 'layouts.default'
+    ];
+
     protected $resetBlade = false;
 
     protected function setJavascriptData($key, $value = null)

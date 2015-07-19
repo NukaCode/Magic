@@ -26,6 +26,11 @@ class Card extends BaseModel
         return preg_replace('/{(.)}/', '<img src="/images/blank.png" id="$1" />', $this->attributes['manaCost']);
     }
 
+    public function getImageAttribute()
+    {
+        return '<img src="data:image/png;base64,'. base64_encode(file_get_contents('http://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid='. $this->attributes['multiverseid'])) .'" />';
+    }
+
     public function series()
     {
         return $this->belongsTo(Series::class, 'series_id');

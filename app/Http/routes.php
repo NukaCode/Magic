@@ -11,4 +11,5 @@
 |
 */
 
+Route::get('image/{id}', 'HomeController@image');
 Route::get('/', 'HomeController@index');
