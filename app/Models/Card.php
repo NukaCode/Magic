@@ -23,7 +23,7 @@ class Card extends BaseModel
 
     public function getManaCostAttribute()
     {
-        return preg_replace('/{(.)}/', '<img src="/images/blank.png" class="manaCost" id="$1" />', $this->attributes['manaCost']);
+        return preg_replace('/{(.)}/', '<img src="/images/blank.png" class="costIcon" id="$1" />', $this->attributes['manaCost']);
     }
 
     public function getImageAttribute()

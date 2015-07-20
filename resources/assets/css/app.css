@@ -48097,92 +48097,95 @@ html.ios body {
 /*--- Colored Backgrounds ---*/
 /*--- Colored Headers ---*/
 /*--- Colored Text ---*/
-img.manaCost {
+img.costIcon {
   width: 10px;
   height: 10px;
   background: url('../images/mana_clear.png');
   background-size: 1000%;
 }
-img.manaCost[id='0'] {
+img.costIcon[id='0'] {
   background-position: 0 0;
 }
-img.manaCost[id='1'] {
+img.costIcon[id='1'] {
   background-position: 90px 0;
 }
-img.manaCost[id='2'] {
+img.costIcon[id='2'] {
   background-position: 80px 0;
 }
-img.manaCost[id='3'] {
+img.costIcon[id='3'] {
   background-position: 70px 0;
 }
-img.manaCost[id='4'] {
+img.costIcon[id='4'] {
   background-position: 60px 0;
 }
-img.manaCost[id='5'] {
+img.costIcon[id='5'] {
   background-position: 50px 0;
 }
-img.manaCost[id='6'] {
+img.costIcon[id='6'] {
   background-position: 40px 0;
 }
-img.manaCost[id='7'] {
+img.costIcon[id='7'] {
   background-position: 30px 0;
 }
-img.manaCost[id='8'] {
+img.costIcon[id='8'] {
   background-position: 20px 0;
 }
-img.manaCost[id='9'] {
+img.costIcon[id='9'] {
   background-position: 10px 0;
 }
-img.manaCost[id='10'] {
+img.costIcon[id='10'] {
   background-position: 0 -10px;
 }
-img.manaCost[id='11'] {
+img.costIcon[id='11'] {
   background-position: 90px -10px;
 }
-img.manaCost[id='12'] {
+img.costIcon[id='12'] {
   background-position: 80px -10px;
 }
-img.manaCost[id='13'] {
+img.costIcon[id='13'] {
   background-position: 70px -10px;
 }
-img.manaCost[id='14'] {
+img.costIcon[id='14'] {
   background-position: 60px -10px;
 }
-img.manaCost[id='15'] {
+img.costIcon[id='15'] {
   background-position: 50px -10px;
 }
-img.manaCost[id='16'] {
+img.costIcon[id='16'] {
   background-position: 40px -10px;
 }
-img.manaCost[id='17'] {
+img.costIcon[id='17'] {
   background-position: 30px -10px;
 }
-img.manaCost[id='18'] {
+img.costIcon[id='18'] {
   background-position: 20px -10px;
 }
-img.manaCost[id='19'] {
+img.costIcon[id='19'] {
   background-position: 10px -10px;
 }
-img.manaCost[id='20'] {
+img.costIcon[id='20'] {
   background-position: 0 -20px;
 }
-img.manaCost[id='X'] {
+img.costIcon[id='X'] {
   background-position: 90px -20px;
 }
-img.manaCost[id='G'] {
+img.costIcon[id='G'] {
   background-position: 20px 50px;
 }
-img.manaCost[id='R'] {
+img.costIcon[id='R'] {
   background-position: 30px 50px;
 }
-img.manaCost[id='B'] {
+img.costIcon[id='B'] {
   background-position: 40px 50px;
 }
-img.manaCost[id='U'] {
+img.costIcon[id='U'] {
   background-position: 50px 50px;
 }
-img.manaCost[id='W'] {
+img.costIcon[id='W'] {
   background-position: 60px 50px;
+}
+img.costIcon[id='T'] {
+  background-position: 0 20px;
 }
 
 /*# sourceMappingURL=app.css.map */
