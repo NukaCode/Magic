@@ -11,7 +11,7 @@ class HomeController extends Controller
 
     public function index(Card $card)
     {
-        $cards = $card->all();
+        $cards = $card->where('type', '!=', 'Land')->get();
 
         $this->setJavascriptData(compact('cards'));
     }
